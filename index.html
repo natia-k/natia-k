@@ -1,117 +1,141 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Veritas Life OS — Prototype Redesign</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="grain"></div>
-
-    <header class="topbar shell">
-      <div class="brand">
-        <div class="brand-dot"></div>
-        <span>Veritas Life OS</span>
-      </div>
-      <nav class="nav-links">
-        <a href="#features">Features</a>
-        <a href="#framework">Framework</a>
-        <a href="#flow">Flow</a>
-        <a href="#start">Get started</a>
-      </nav>
-    </header>
-
-    <main>
-      <section class="hero shell">
-        <div class="hero-copy">
-          <p class="eyebrow">Design Prototype • Anytype × Things-inspired UI</p>
-          <h1>Build a life system that feels calm, focused, and true.</h1>
-          <p class="subcopy">
-            Veritas Life OS helps you capture what matters, shape meaningful routines,
-            and move from intention to action with clarity.
-          </p>
-          <div class="hero-actions" id="start">
-            <button class="btn btn-primary">Start your system</button>
-            <button class="btn btn-ghost">Explore framework</button>
-          </div>
-        </div>
-
-        <aside class="hero-card glass">
-          <h3>Today</h3>
-          <ul>
-            <li><span>1</span> Morning reflection</li>
-            <li><span>2</span> Deep work block</li>
-            <li><span>3</span> Movement + health</li>
-            <li><span>4</span> Family / relationships</li>
-            <li><span>5</span> Evening review</li>
-          </ul>
-        </aside>
-      </section>
-
-      <section class="features shell" id="features">
-        <article class="panel glass">
-          <h2>Clarity</h2>
-          <p>Turn all your notes, goals, and commitments into one trusted operating space.</p>
-        </article>
-        <article class="panel glass">
-          <h2>Alignment</h2>
-          <p>Keep your values, weekly priorities, and daily actions connected and visible.</p>
-        </article>
-        <article class="panel glass">
-          <h2>Consistency</h2>
-          <p>Create simple rituals and repeatable systems that help you sustain momentum.</p>
-        </article>
-      </section>
-
-      <section class="framework shell" id="framework">
-        <div class="section-head">
-          <p class="eyebrow">Life OS Framework</p>
-          <h2>From vision to daily execution.</h2>
-        </div>
-        <div class="framework-grid">
-          <div class="framework-card glass">
-            <h3>Identity</h3>
-            <p>Define who you are becoming and what principles guide your choices.</p>
-          </div>
-          <div class="framework-card glass">
-            <h3>Focus</h3>
-            <p>Select the few priorities that matter most in this season.</p>
-          </div>
-          <div class="framework-card glass">
-            <h3>Systems</h3>
-            <p>Design routines, environments, and checkpoints that make progress easier.</p>
-          </div>
-          <div class="framework-card glass">
-            <h3>Review</h3>
-            <p>Reflect weekly, recalibrate quickly, and keep your direction intact.</p>
-          </div>
-        </div>
-      </section>
-
-      <section class="flow shell" id="flow">
-        <div class="section-head">
-          <p class="eyebrow">Typical Daily Flow</p>
-          <h2>Minimal friction. Maximum presence.</h2>
-        </div>
-        <ol class="timeline glass">
-          <li><strong>Capture</strong> ideas, obligations, and opportunities in seconds.</li>
-          <li><strong>Prioritize</strong> one essential outcome for each key life area.</li>
-          <li><strong>Execute</strong> with focused blocks and context-aware tasks.</li>
-          <li><strong>Reflect</strong> on wins, lessons, and next best actions.</li>
-        </ol>
-      </section>
-    </main>
-
-    <footer class="footer shell">
-      <p>Prototype concept for Veritas Life OS redesign.</p>
-      <p class="muted">Style direction inspired by Anytype + Things-like clarity and spacing.</p>
-    </footer>
-  </body>
-</html>
+ (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000000000000000000000000000000000000..f68ba253d7c681f861342864a819e3a3cc3b5b05
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,131 @@
++<!doctype html>
++<html lang="en">
++  <head>
++    <meta charset="UTF-8" />
++    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
++    <title>Veritas Life OS — Prototype Redesign</title>
++    <link rel="preconnect" href="https://fonts.googleapis.com" />
++    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
++    <link
++      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
++      rel="stylesheet"
++    />
++    <link rel="stylesheet" href="styles.css" />
++  </head>
++  <body>
++    <div class="page-noise" aria-hidden="true"></div>
++
++    <header class="site-header wrap">
++      <a class="brand" href="#">
++        <span class="brand-mark"></span>
++        <span>Veritas Life OS</span>
++      </a>
++      <nav class="pill-nav" aria-label="Primary">
++        <a href="#features">Features</a>
++        <a href="#framework">Framework</a>
++        <a href="#workflow">Workflow</a>
++      </nav>
++      <button class="btn btn-dark">Start now</button>
++    </header>
++
++    <main>
++      <section class="hero wrap">
++        <div class="hero-content">
++          <p class="kicker">Life operating system</p>
++          <h1>Design your life with clarity, rhythm, and intention.</h1>
++          <p class="lead">
++            Veritas Life OS helps you align identity, priorities, and daily execution in one
++            calm command center.
++          </p>
++          <div class="hero-cta">
++            <button class="btn btn-dark">Build my system</button>
++            <button class="btn btn-light">See framework</button>
++          </div>
++        </div>
++
++        <div class="hero-panel glass">
++          <div class="panel-head">
++            <p>Today</p>
++            <span>Focused</span>
++          </div>
++          <ul>
++            <li><strong>Morning reset</strong><span>20 min</span></li>
++            <li><strong>Deep work sprint</strong><span>90 min</span></li>
++            <li><strong>Health block</strong><span>45 min</span></li>
++            <li><strong>Evening reflection</strong><span>15 min</span></li>
++          </ul>
++        </div>
++      </section>
++
++      <section class="metrics wrap">
++        <article>
++          <p class="metric">01</p>
++          <h3>Capture</h3>
++          <p>Keep ideas, tasks, and decisions in one trusted place.</p>
++        </article>
++        <article>
++          <p class="metric">02</p>
++          <h3>Align</h3>
++          <p>Connect daily action to values, goals, and season priorities.</p>
++        </article>
++        <article>
++          <p class="metric">03</p>
++          <h3>Execute</h3>
++          <p>Move through focused routines with less friction and noise.</p>
++        </article>
++      </section>
++
++      <section class="feature-block wrap" id="features">
++        <div class="feature-copy">
++          <p class="kicker">Premium clarity</p>
++          <h2>A cleaner interface for deeper focus.</h2>
++          <p>
++            Inspired by the visual confidence of modern productivity tools: soft gradients,
++            elevated cards, sharp typography, and strong spacing.
++          </p>
++        </div>
++        <div class="feature-stack">
++          <article class="glass">
++            <h3>Life Areas</h3>
++            <p>Personal, health, work, relationships, finance — all mapped as living systems.</p>
++          </article>
++          <article class="glass">
++            <h3>Weekly Compass</h3>
++            <p>One glance at outcomes, commitments, and what actually matters this week.</p>
++          </article>
++          <article class="glass">
++            <h3>Review Rituals</h3>
++            <p>Daily and weekly reflections that keep direction consistent over time.</p>
++          </article>
++        </div>
++      </section>
++
++      <section class="system wrap" id="framework">
++        <p class="kicker">Operating model</p>
++        <h2>From identity to daily execution.</h2>
++        <div class="system-grid">
++          <article class="glass"><h3>Identity</h3><p>Who you are becoming.</p></article>
++          <article class="glass"><h3>Vision</h3><p>Where your life is heading.</p></article>
++          <article class="glass"><h3>Priorities</h3><p>What matters in this season.</p></article>
++          <article class="glass"><h3>Routines</h3><p>How consistency gets built.</p></article>
++        </div>
++      </section>
++
++      <section class="workflow wrap" id="workflow">
++        <p class="kicker">Daily rhythm</p>
++        <h2>Minimal steps. Strong momentum.</h2>
++        <ol class="glass">
++          <li>Capture inputs and open loops.</li>
++          <li>Choose one meaningful outcome per life area.</li>
++          <li>Execute in focused blocks with intentional rest.</li>
++          <li>Reflect, score, and calibrate for tomorrow.</li>
++        </ol>
++      </section>
++    </main>
++
++    <footer class="site-footer wrap">
++      <p>Prototype concept for Veritas Life OS redesign.</p>
++      <p>Style direction inspired by Anytype + Things-like clarity and spacing.</p>
++    </footer>
++  </body>
++</html>
+ 
+EOF
+)
