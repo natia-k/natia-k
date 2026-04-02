@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Thinker Institute | Official</title>
+    <title>Free Thinker Institute | Increase Happiness</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
 
@@ -12,7 +12,7 @@
             --bg: #ffffff;
             --text: #1a1a14;
             --muted: #666660;
-            --accent: #1a2b6d; /* Midnight Indigo */
+            --accent: #1a2b6d; /* Deep Midnight Indigo */
             --line: rgba(0, 0, 0, 0.1);
             --transition: 800ms cubic-bezier(0.19, 1, 0.22, 1);
         }
@@ -31,269 +31,137 @@
 
         .container { max-width: 1440px; margin: 0 auto; padding: 0 50px; }
 
-        /* HEADER */
+        /* Navigation */
         .site-header {
             position: fixed; top: 0; width: 100%; z-index: 1000;
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--line);
         }
-
-        .nav-wrap { height: 100px; display: flex; align-items: center; justify-content: space-between; position: relative; }
-        
-        .brand { 
-            font-weight: 800; font-size: 14px; letter-spacing: 0.2em; 
-            text-decoration: none; color: var(--text); text-transform: uppercase;
-        }
-
-        .desktop-nav { 
-            display: flex; gap: 40px; 
-            position: absolute; left: 50%; transform: translateX(-50%);
-        }
-
-        .desktop-nav a { 
-            text-decoration: none; color: var(--muted); 
-            font-size: 11px; font-weight: 700; text-transform: uppercase;
-            transition: color 0.3s ease;
-        }
+        .nav-wrap { height: 100px; display: flex; align-items: center; justify-content: space-between; }
+        .brand { font-weight: 800; font-size: 14px; letter-spacing: 0.2em; text-decoration: none; color: var(--text); text-transform: uppercase; }
+        .desktop-nav { display: flex; gap: 40px; }
+        .desktop-nav a { text-decoration: none; color: var(--muted); font-size: 11px; font-weight: 700; text-transform: uppercase; transition: 0.3s; }
         .desktop-nav a:hover { color: var(--accent); }
 
-        .nav-cta {
-            background: var(--text); color: white;
-            padding: 12px 28px; font-size: 11px; font-weight: 700;
-            text-decoration: none; text-transform: uppercase;
-            transition: all 0.4s ease;
-        }
-        .nav-cta:hover { background: var(--accent); }
-
-        /* HERO SECTION */
+        /* Hero & Magnet Text */
         .hero { padding: 260px 0 140px; min-height: 90vh; display: flex; align-items: center; }
-        .section-label { 
-            display: block; font-size: 12px; font-weight: 700; 
-            color: var(--accent); text-transform: uppercase; 
-            margin-bottom: 35px; letter-spacing: 0.15em;
-        }
-
-        .hero-title {
-            font-family: 'Cormorant Garamond', serif;
-            font-size: clamp(3.5rem, 9.5vw, 9.5rem);
-            line-height: 0.85; letter-spacing: -0.04em;
-            margin-bottom: 80px;
-            max-width: 1300px;
-        }
-
-        .char { 
-            display: inline-block; white-space: pre; 
-            transition: transform 0.2s ease-out, color 0.4s ease;
-            will-change: transform;
-        }
-
-        .hero-footer { 
-            display: flex; justify-content: space-between; align-items: flex-end; 
-            border-top: 2px solid var(--text); padding-top: 50px;
-        }
-
+        .section-label { display: block; font-size: 12px; font-weight: 700; color: var(--accent); text-transform: uppercase; margin-bottom: 35px; letter-spacing: 0.15em; }
+        .hero-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(3.5rem, 9.5vw, 9.5rem); line-height: 0.85; letter-spacing: -0.04em; margin-bottom: 80px; }
+        .char { display: inline-block; white-space: pre; transition: transform 0.2s ease-out, color 0.4s ease; will-change: transform; }
+        .hero-footer { display: flex; justify-content: space-between; align-items: flex-end; border-top: 2px solid var(--text); padding-top: 50px; }
         .hero-subtitle { font-size: 1.5rem; color: var(--muted); max-width: 600px; font-weight: 300; }
 
-        /* GRID SECTIONS */
+        /* Content Grids */
         .grid-section { padding: 150px 0; border-bottom: 1px solid var(--line); }
         .bg-soft { background: #fbfbf9; }
-
-        .section-intro { max-width: 800px; margin-bottom: 60px; }
-        .section-intro h2 { font-family: 'Cormorant Garamond', serif; font-size: 48px; margin-bottom: 20px; line-height: 1.1; }
-
-        .institute-grid {
-            display: grid; grid-template-columns: repeat(3, 1fr);
-            border-top: 1px solid var(--line); border-left: 1px solid var(--line);
-        }
-
-        .grid-card {
-            padding: 80px 50px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
-            transition: background 0.6s ease;
-        }
-        .grid-card:hover { background: #fdfdfd; }
+        .institute-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); border-top: 1px solid var(--line); border-left: 1px solid var(--line); margin-top: 70px; }
+        .grid-card { padding: 90px 60px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); transition: 0.6s; }
+        .grid-card:hover { background: #ffffff; }
         .card-num { color: var(--accent); font-weight: 800; font-size: 13px; margin-bottom: 35px; display: block; }
-        .grid-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; margin-bottom: 20px; font-weight: 500; }
-        .grid-card p { color: var(--muted); font-size: 17px; line-height: 1.6; }
+        .grid-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 38px; margin-bottom: 25px; font-weight: 500; }
 
-        /* TWO COLUMN LAYOUT (What We Do) */
-        .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 60px; }
-        .split-card { padding: 60px; background: #fff; border: 1px solid var(--line); }
-        .split-card ul { list-style: none; margin-top: 30px; }
-        .split-card li { margin-bottom: 15px; padding-left: 25px; position: relative; color: var(--muted); }
-        .split-card li::before { content: "•"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
-
-        /* REVEALS */
+        /* Animations */
         .reveal { opacity: 0; transform: translateY(50px); transition: 1.4s var(--transition); }
         .reveal.in-view { opacity: 1; transform: translateY(0); }
 
-        @media (max-width: 1100px) {
-            .institute-grid, .split-grid { grid-template-columns: 1fr; }
-            .desktop-nav { display: none; }
-        }
+        @media (max-width: 768px) { .container { padding: 0 30px; } .hero-title { font-size: 4.5rem; } }
     </style>
 </head>
 <body>
 
-<header class="site-header">
-    <div class="container nav-wrap">
-        <a href="#" class="brand">Free Thinker Institute</a>
-        <nav class="desktop-nav">
-            <a href="#intentions">Intentions</a>
-            <a href="#goals">Goals</a>
-            <a href="#whatwedo">What We Do</a>
-            <a href="#training">Training</a>
-        </nav>
-        <a href="https://discord.gg/" class="nav-cta">Join Discord</a>
-    </div>
-</header>
-
-<main>
-    <section class="hero">
-        <div class="container">
-            <span class="section-label reveal">Community = Unity + Diversity</span>
-            <h1 class="hero-title" id="interactive-title">Increase happiness. Minimize harm.</h1>
-            <div class="hero-footer reveal">
-                <p class="hero-subtitle">A high-impact community advancing human progress through integrated development.</p>
-            </div>
+    <header class="site-header">
+        <div class="container nav-wrap">
+            <a href="#" class="brand">Free Thinker Institute</a>
+            <nav class="desktop-nav">
+                <a href="#intentions">Intentions</a>
+                <a href="#goals">Goals</a>
+                <a href="#training">Training</a>
+            </nav>
         </div>
-    </section>
+    </header>
 
-    <section class="grid-section" id="intentions">
-        <div class="container">
-            <div class="section-intro reveal">
-                <span class="section-label">01 — Five Intentions</span>
-                <h2>A framework for thoughtful living.</h2>
-                <p>These intentions shape how the community approaches growth, dialogue, truth, and connection.</p>
-            </div>
-            <div class="institute-grid">
-                <div class="grid-card reveal">
-                    <span class="card-num">01</span>
-                    <h3>Devotion to self-improvement</h3>
-                    <p>Physical, intellectual, emotional, and philosophical growth. A serious relationship to becoming more capable and aware.</p>
-                </div>
-                <div class="grid-card reveal">
-                    <span class="card-num">02</span>
-                    <h3>Transparency & Open-mindedness</h3>
-                    <p>Stay willing to refine your thinking. Consider other perspectives carefully without collapsing into certainty too quickly.</p>
-                </div>
-                <div class="grid-card reveal">
-                    <span class="card-num">03</span>
-                    <h3>Critical Thinking</h3>
-                    <p>Improve judgment and rational thought to navigate the world with purpose and objective clarity.</p>
+    <main>
+        <section class="hero">
+            <div class="container">
+                <span class="section-label reveal">Global Initiative</span>
+                <h1 class="hero-title" id="interactive-title">Increase happiness. Minimize harm.</h1>
+                <div class="hero-footer reveal">
+                    <p class="hero-subtitle">Community = Unity + Diversity. Advancing progress through integrated personal development.</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="grid-section bg-soft" id="goals">
-        <div class="container">
-            <div class="section-intro reveal">
-                <span class="section-label">02 — Global Goals</span>
-                <h2>Ambitious and virtuous objectives.</h2>
-            </div>
-            <div class="institute-grid">
-                <div class="grid-card reveal">
-                    <span class="card-num">04</span>
-                    <h3>Is Polite</h3>
-                    <p>Create a warm, compassionate, open-minded community with an enriching, meaningful social life.</p>
-                </div>
-                <div class="grid-card reveal">
-                    <span class="card-num">05</span>
-                    <h3>Is Prosperous</h3>
-                    <p>Help everyone make enough money that money no longer buys happiness, but fuels freedom.</p>
-                </div>
-                <div class="grid-card reveal">
-                    <span class="card-num">06</span>
-                    <h3>Shares Good Ideas</h3>
-                    <p>Create and spread ideas that maximize happiness and minimize harm across the globe.</p>
+        <section class="grid-section" id="intentions">
+            <div class="container">
+                <span class="section-label">The Five Intentions</span>
+                <div class="institute-grid">
+                    <div class="grid-card reveal">
+                        <span class="card-num">01</span>
+                        <h3>Self Improvement</h3>
+                        <p>A devotion to physical, intellectual, and philosophical growth. Strive for a constant state of evolution.</p>
+                    </div>
+                    <div class="grid-card reveal">
+                        <span class="card-num">02</span>
+                        <h3>Transparency</h3>
+                        <p>Be true to yourself and share your authentic self. Consider diverse perspectives carefully.</p>
+                    </div>
+                    <div class="grid-card reveal">
+                        <span class="card-num">03</span>
+                        <h3>Critical Thinking</h3>
+                        <p>Trust and improve your own judgment through reason and evidence-based logic.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="grid-section" id="whatwedo">
-        <div class="container">
-            <div class="section-intro reveal">
-                <span class="section-label">03 — Our Focus</span>
-                <h2>Personal & Professional Development.</h2>
-            </div>
-            <div class="split-grid reveal">
-                <div class="split-card">
-                    <h3>Personal Development</h3>
-                    <ul>
-                        <li>The five intentions</li>
-                        <li>Personal development topics</li>
-                        <li>Anything else of interest to the group</li>
-                    </ul>
-                </div>
-                <div class="split-card">
-                    <h3>Professional Development</h3>
-                    <ul>
-                        <li>Identify your dream job</li>
-                        <li>Get a valuable skillset in that job</li>
-                        <li>Learn to excel in your current role</li>
-                        <li>Network with experienced professionals</li>
-                    </ul>
+        <section class="grid-section bg-soft" id="goals">
+            <div class="container">
+                <span class="section-label">Global Goals</span>
+                <div class="institute-grid">
+                    <div class="grid-card reveal">
+                        <span class="card-num">04</span>
+                        <h3>Maximize Freedom</h3>
+                        <p>Pursue happiness while minimizing harm to others. Freedom is the core of human progress.</p>
+                    </div>
+                    <div class="grid-card reveal">
+                        <span class="card-num">05</span>
+                        <h3>Prosperity</h3>
+                        <p>Achieve financial independence so resources become a tool for mission-driven work.</p>
+                    </div>
+                    <div class="grid-card reveal">
+                        <span class="card-num">06</span>
+                        <h3>Compassionate Ideas</h3>
+                        <p>Developing concepts that maximize collective well-being and empathy in a globalized world.</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <section class="grid-section bg-soft" id="training">
-        <div class="container">
-            <div class="section-intro reveal">
-                <span class="section-label">04 — Training</span>
-                <h2>Dream Job Training Program.</h2>
-            </div>
-            <div class="institute-grid">
-                <div class="grid-card reveal">
-                    <h3>Skill Acquisition</h3>
-                    <p>Focused tracks in Product Management, Software Development, UX Design, and Automated QA.</p>
-                </div>
-                <div class="grid-card reveal">
-                    <h3>Networking</h3>
-                    <p>Connect directly with industry leaders and mentors to accelerate your career trajectory.</p>
-                </div>
-                <div class="grid-card reveal">
-                    <h3>Career Strategy</h3>
-                    <p>Personalized roadmaps to help you transition from where you are to where you belong.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-</main>
-
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const title = document.getElementById('interactive-title');
-        
-        // MAGNET EFFECT
-        if (title) {
-            title.innerHTML = [...title.innerText].map(c => `<span class="char">${c === ' ' ? '&nbsp;' : c}</span>`).join('');
-            const chars = title.querySelectorAll('.char');
-            window.addEventListener('mousemove', (e) => {
-                chars.forEach(char => {
-                    const r = char.getBoundingClientRect();
-                    const dist = Math.hypot(e.clientX - (r.left + r.width/2), e.clientY - (r.top + r.height/2));
-                    if (dist < 100) {
-                        const angle = Math.atan2(e.clientY - (r.top + r.height/2), e.clientX - (r.left + r.width/2));
-                        char.style.transform = `translate(${Math.cos(angle) * (100 - dist) * -0.2}px, ${Math.sin(angle) * (100 - dist) * -0.2}px)`;
-                        char.style.color = "#1a2b6d";
-                    } else {
-                        char.style.transform = ''; char.style.color = '';
-                    }
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const title = document.getElementById('interactive-title');
+            if (title) {
+                title.innerHTML = [...title.innerText].map(c => `<span class="char">${c === ' ' ? '&nbsp;' : c}</span>`).join('');
+                const chars = title.querySelectorAll('.char');
+                window.addEventListener('mousemove', (e) => {
+                    chars.forEach(char => {
+                        const rect = char.getBoundingClientRect();
+                        const dist = Math.hypot(e.clientX - (rect.left + rect.width / 2), e.clientY - (rect.top + rect.height / 2));
+                        if (distance < 120) {
+                            const angle = Math.atan2(e.clientY - (rect.top + rect.height / 2), e.clientX - (rect.left + rect.width / 2));
+                            char.style.transform = `translate(${Math.cos(angle) * -20}px, ${Math.sin(angle) * -20}px)`;
+                            char.style.color = "#1a2b6d";
+                        } else { char.style.transform = ''; char.style.color = ''; }
+                    });
                 });
-            });
-        }
-
-        // SCROLL REVEAL
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('in-view'); });
-        }, { threshold: 0.1 });
-        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-    });
-</script>
-
+            }
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('in-view'); });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+        });
+    </script>
 </body>
 </html>
