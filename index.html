@@ -1,141 +1,299 @@
- (cd "$(git rev-parse --show-toplevel)" && git apply --3way <<'EOF' 
-diff --git a/index.html b/index.html
-new file mode 100644
-index 0000000000000000000000000000000000000000..f68ba253d7c681f861342864a819e3a3cc3b5b05
---- /dev/null
-+++ b/index.html
-@@ -0,0 +1,131 @@
-+<!doctype html>
-+<html lang="en">
-+  <head>
-+    <meta charset="UTF-8" />
-+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-+    <title>Veritas Life OS — Prototype Redesign</title>
-+    <link rel="preconnect" href="https://fonts.googleapis.com" />
-+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-+    <link
-+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
-+      rel="stylesheet"
-+    />
-+    <link rel="stylesheet" href="styles.css" />
-+  </head>
-+  <body>
-+    <div class="page-noise" aria-hidden="true"></div>
-+
-+    <header class="site-header wrap">
-+      <a class="brand" href="#">
-+        <span class="brand-mark"></span>
-+        <span>Veritas Life OS</span>
-+      </a>
-+      <nav class="pill-nav" aria-label="Primary">
-+        <a href="#features">Features</a>
-+        <a href="#framework">Framework</a>
-+        <a href="#workflow">Workflow</a>
-+      </nav>
-+      <button class="btn btn-dark">Start now</button>
-+    </header>
-+
-+    <main>
-+      <section class="hero wrap">
-+        <div class="hero-content">
-+          <p class="kicker">Life operating system</p>
-+          <h1>Design your life with clarity, rhythm, and intention.</h1>
-+          <p class="lead">
-+            Veritas Life OS helps you align identity, priorities, and daily execution in one
-+            calm command center.
-+          </p>
-+          <div class="hero-cta">
-+            <button class="btn btn-dark">Build my system</button>
-+            <button class="btn btn-light">See framework</button>
-+          </div>
-+        </div>
-+
-+        <div class="hero-panel glass">
-+          <div class="panel-head">
-+            <p>Today</p>
-+            <span>Focused</span>
-+          </div>
-+          <ul>
-+            <li><strong>Morning reset</strong><span>20 min</span></li>
-+            <li><strong>Deep work sprint</strong><span>90 min</span></li>
-+            <li><strong>Health block</strong><span>45 min</span></li>
-+            <li><strong>Evening reflection</strong><span>15 min</span></li>
-+          </ul>
-+        </div>
-+      </section>
-+
-+      <section class="metrics wrap">
-+        <article>
-+          <p class="metric">01</p>
-+          <h3>Capture</h3>
-+          <p>Keep ideas, tasks, and decisions in one trusted place.</p>
-+        </article>
-+        <article>
-+          <p class="metric">02</p>
-+          <h3>Align</h3>
-+          <p>Connect daily action to values, goals, and season priorities.</p>
-+        </article>
-+        <article>
-+          <p class="metric">03</p>
-+          <h3>Execute</h3>
-+          <p>Move through focused routines with less friction and noise.</p>
-+        </article>
-+      </section>
-+
-+      <section class="feature-block wrap" id="features">
-+        <div class="feature-copy">
-+          <p class="kicker">Premium clarity</p>
-+          <h2>A cleaner interface for deeper focus.</h2>
-+          <p>
-+            Inspired by the visual confidence of modern productivity tools: soft gradients,
-+            elevated cards, sharp typography, and strong spacing.
-+          </p>
-+        </div>
-+        <div class="feature-stack">
-+          <article class="glass">
-+            <h3>Life Areas</h3>
-+            <p>Personal, health, work, relationships, finance — all mapped as living systems.</p>
-+          </article>
-+          <article class="glass">
-+            <h3>Weekly Compass</h3>
-+            <p>One glance at outcomes, commitments, and what actually matters this week.</p>
-+          </article>
-+          <article class="glass">
-+            <h3>Review Rituals</h3>
-+            <p>Daily and weekly reflections that keep direction consistent over time.</p>
-+          </article>
-+        </div>
-+      </section>
-+
-+      <section class="system wrap" id="framework">
-+        <p class="kicker">Operating model</p>
-+        <h2>From identity to daily execution.</h2>
-+        <div class="system-grid">
-+          <article class="glass"><h3>Identity</h3><p>Who you are becoming.</p></article>
-+          <article class="glass"><h3>Vision</h3><p>Where your life is heading.</p></article>
-+          <article class="glass"><h3>Priorities</h3><p>What matters in this season.</p></article>
-+          <article class="glass"><h3>Routines</h3><p>How consistency gets built.</p></article>
-+        </div>
-+      </section>
-+
-+      <section class="workflow wrap" id="workflow">
-+        <p class="kicker">Daily rhythm</p>
-+        <h2>Minimal steps. Strong momentum.</h2>
-+        <ol class="glass">
-+          <li>Capture inputs and open loops.</li>
-+          <li>Choose one meaningful outcome per life area.</li>
-+          <li>Execute in focused blocks with intentional rest.</li>
-+          <li>Reflect, score, and calibrate for tomorrow.</li>
-+        </ol>
-+      </section>
-+    </main>
-+
-+    <footer class="site-footer wrap">
-+      <p>Prototype concept for Veritas Life OS redesign.</p>
-+      <p>Style direction inspired by Anytype + Things-like clarity and spacing.</p>
-+    </footer>
-+  </body>
-+</html>
- 
-EOF
-)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Thinker Institute | Official</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Cormorant+Garamond:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg: #ffffff;
+            --text: #1a1a14;
+            --muted: #666660;
+            --accent: #1a2b6d; /* Midnight Indigo */
+            --line: rgba(0, 0, 0, 0.1);
+            --transition: 800ms cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+
+        body { 
+            font-family: 'Inter', sans-serif; 
+            background: var(--bg); 
+            color: var(--text); 
+            line-height: 1.6;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        .container { max-width: 1440px; margin: 0 auto; padding: 0 50px; }
+
+        /* HEADER */
+        .site-header {
+            position: fixed; top: 0; width: 100%; z-index: 1000;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid var(--line);
+        }
+
+        .nav-wrap { height: 100px; display: flex; align-items: center; justify-content: space-between; position: relative; }
+        
+        .brand { 
+            font-weight: 800; font-size: 14px; letter-spacing: 0.2em; 
+            text-decoration: none; color: var(--text); text-transform: uppercase;
+        }
+
+        .desktop-nav { 
+            display: flex; gap: 40px; 
+            position: absolute; left: 50%; transform: translateX(-50%);
+        }
+
+        .desktop-nav a { 
+            text-decoration: none; color: var(--muted); 
+            font-size: 11px; font-weight: 700; text-transform: uppercase;
+            transition: color 0.3s ease;
+        }
+        .desktop-nav a:hover { color: var(--accent); }
+
+        .nav-cta {
+            background: var(--text); color: white;
+            padding: 12px 28px; font-size: 11px; font-weight: 700;
+            text-decoration: none; text-transform: uppercase;
+            transition: all 0.4s ease;
+        }
+        .nav-cta:hover { background: var(--accent); }
+
+        /* HERO SECTION */
+        .hero { padding: 260px 0 140px; min-height: 90vh; display: flex; align-items: center; }
+        .section-label { 
+            display: block; font-size: 12px; font-weight: 700; 
+            color: var(--accent); text-transform: uppercase; 
+            margin-bottom: 35px; letter-spacing: 0.15em;
+        }
+
+        .hero-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: clamp(3.5rem, 9.5vw, 9.5rem);
+            line-height: 0.85; letter-spacing: -0.04em;
+            margin-bottom: 80px;
+            max-width: 1300px;
+        }
+
+        .char { 
+            display: inline-block; white-space: pre; 
+            transition: transform 0.2s ease-out, color 0.4s ease;
+            will-change: transform;
+        }
+
+        .hero-footer { 
+            display: flex; justify-content: space-between; align-items: flex-end; 
+            border-top: 2px solid var(--text); padding-top: 50px;
+        }
+
+        .hero-subtitle { font-size: 1.5rem; color: var(--muted); max-width: 600px; font-weight: 300; }
+
+        /* GRID SECTIONS */
+        .grid-section { padding: 150px 0; border-bottom: 1px solid var(--line); }
+        .bg-soft { background: #fbfbf9; }
+
+        .section-intro { max-width: 800px; margin-bottom: 60px; }
+        .section-intro h2 { font-family: 'Cormorant Garamond', serif; font-size: 48px; margin-bottom: 20px; line-height: 1.1; }
+
+        .institute-grid {
+            display: grid; grid-template-columns: repeat(3, 1fr);
+            border-top: 1px solid var(--line); border-left: 1px solid var(--line);
+        }
+
+        .grid-card {
+            padding: 80px 50px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line);
+            transition: background 0.6s ease;
+        }
+        .grid-card:hover { background: #fdfdfd; }
+        .card-num { color: var(--accent); font-weight: 800; font-size: 13px; margin-bottom: 35px; display: block; }
+        .grid-card h3 { font-family: 'Cormorant Garamond', serif; font-size: 32px; margin-bottom: 20px; font-weight: 500; }
+        .grid-card p { color: var(--muted); font-size: 17px; line-height: 1.6; }
+
+        /* TWO COLUMN LAYOUT (What We Do) */
+        .split-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; margin-top: 60px; }
+        .split-card { padding: 60px; background: #fff; border: 1px solid var(--line); }
+        .split-card ul { list-style: none; margin-top: 30px; }
+        .split-card li { margin-bottom: 15px; padding-left: 25px; position: relative; color: var(--muted); }
+        .split-card li::before { content: "•"; position: absolute; left: 0; color: var(--accent); font-weight: bold; }
+
+        /* REVEALS */
+        .reveal { opacity: 0; transform: translateY(50px); transition: 1.4s var(--transition); }
+        .reveal.in-view { opacity: 1; transform: translateY(0); }
+
+        @media (max-width: 1100px) {
+            .institute-grid, .split-grid { grid-template-columns: 1fr; }
+            .desktop-nav { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container nav-wrap">
+        <a href="#" class="brand">Free Thinker Institute</a>
+        <nav class="desktop-nav">
+            <a href="#intentions">Intentions</a>
+            <a href="#goals">Goals</a>
+            <a href="#whatwedo">What We Do</a>
+            <a href="#training">Training</a>
+        </nav>
+        <a href="https://discord.gg/" class="nav-cta">Join Discord</a>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="container">
+            <span class="section-label reveal">Community = Unity + Diversity</span>
+            <h1 class="hero-title" id="interactive-title">Increase happiness. Minimize harm.</h1>
+            <div class="hero-footer reveal">
+                <p class="hero-subtitle">A high-impact community advancing human progress through integrated development.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid-section" id="intentions">
+        <div class="container">
+            <div class="section-intro reveal">
+                <span class="section-label">01 — Five Intentions</span>
+                <h2>A framework for thoughtful living.</h2>
+                <p>These intentions shape how the community approaches growth, dialogue, truth, and connection.</p>
+            </div>
+            <div class="institute-grid">
+                <div class="grid-card reveal">
+                    <span class="card-num">01</span>
+                    <h3>Devotion to self-improvement</h3>
+                    <p>Physical, intellectual, emotional, and philosophical growth. A serious relationship to becoming more capable and aware.</p>
+                </div>
+                <div class="grid-card reveal">
+                    <span class="card-num">02</span>
+                    <h3>Transparency & Open-mindedness</h3>
+                    <p>Stay willing to refine your thinking. Consider other perspectives carefully without collapsing into certainty too quickly.</p>
+                </div>
+                <div class="grid-card reveal">
+                    <span class="card-num">03</span>
+                    <h3>Critical Thinking</h3>
+                    <p>Improve judgment and rational thought to navigate the world with purpose and objective clarity.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid-section bg-soft" id="goals">
+        <div class="container">
+            <div class="section-intro reveal">
+                <span class="section-label">02 — Global Goals</span>
+                <h2>Ambitious and virtuous objectives.</h2>
+            </div>
+            <div class="institute-grid">
+                <div class="grid-card reveal">
+                    <span class="card-num">04</span>
+                    <h3>Is Polite</h3>
+                    <p>Create a warm, compassionate, open-minded community with an enriching, meaningful social life.</p>
+                </div>
+                <div class="grid-card reveal">
+                    <span class="card-num">05</span>
+                    <h3>Is Prosperous</h3>
+                    <p>Help everyone make enough money that money no longer buys happiness, but fuels freedom.</p>
+                </div>
+                <div class="grid-card reveal">
+                    <span class="card-num">06</span>
+                    <h3>Shares Good Ideas</h3>
+                    <p>Create and spread ideas that maximize happiness and minimize harm across the globe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid-section" id="whatwedo">
+        <div class="container">
+            <div class="section-intro reveal">
+                <span class="section-label">03 — Our Focus</span>
+                <h2>Personal & Professional Development.</h2>
+            </div>
+            <div class="split-grid reveal">
+                <div class="split-card">
+                    <h3>Personal Development</h3>
+                    <ul>
+                        <li>The five intentions</li>
+                        <li>Personal development topics</li>
+                        <li>Anything else of interest to the group</li>
+                    </ul>
+                </div>
+                <div class="split-card">
+                    <h3>Professional Development</h3>
+                    <ul>
+                        <li>Identify your dream job</li>
+                        <li>Get a valuable skillset in that job</li>
+                        <li>Learn to excel in your current role</li>
+                        <li>Network with experienced professionals</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="grid-section bg-soft" id="training">
+        <div class="container">
+            <div class="section-intro reveal">
+                <span class="section-label">04 — Training</span>
+                <h2>Dream Job Training Program.</h2>
+            </div>
+            <div class="institute-grid">
+                <div class="grid-card reveal">
+                    <h3>Skill Acquisition</h3>
+                    <p>Focused tracks in Product Management, Software Development, UX Design, and Automated QA.</p>
+                </div>
+                <div class="grid-card reveal">
+                    <h3>Networking</h3>
+                    <p>Connect directly with industry leaders and mentors to accelerate your career trajectory.</p>
+                </div>
+                <div class="grid-card reveal">
+                    <h3>Career Strategy</h3>
+                    <p>Personalized roadmaps to help you transition from where you are to where you belong.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const title = document.getElementById('interactive-title');
+        
+        // MAGNET EFFECT
+        if (title) {
+            title.innerHTML = [...title.innerText].map(c => `<span class="char">${c === ' ' ? '&nbsp;' : c}</span>`).join('');
+            const chars = title.querySelectorAll('.char');
+            window.addEventListener('mousemove', (e) => {
+                chars.forEach(char => {
+                    const r = char.getBoundingClientRect();
+                    const dist = Math.hypot(e.clientX - (r.left + r.width/2), e.clientY - (r.top + r.height/2));
+                    if (dist < 100) {
+                        const angle = Math.atan2(e.clientY - (r.top + r.height/2), e.clientX - (r.left + r.width/2));
+                        char.style.transform = `translate(${Math.cos(angle) * (100 - dist) * -0.2}px, ${Math.sin(angle) * (100 - dist) * -0.2}px)`;
+                        char.style.color = "#1a2b6d";
+                    } else {
+                        char.style.transform = ''; char.style.color = '';
+                    }
+                });
+            });
+        }
+
+        // SCROLL REVEAL
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('in-view'); });
+        }, { threshold: 0.1 });
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    });
+</script>
+
+</body>
+</html>
