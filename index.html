@@ -18,15 +18,8 @@
             --transition: 700ms cubic-bezier(0.19, 1, 0.22, 1);
         }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-
-        html {
-            scroll-behavior: smooth;
-        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Inter', sans-serif;
@@ -55,16 +48,15 @@
         }
 
         .nav-wrap {
-            height: 100px;
+            height: 90px;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            position: relative;
         }
 
         .brand {
             font-weight: 800;
-            font-size: 14px;
+            font-size: 13px;
             letter-spacing: 0.2em;
             text-decoration: none;
             color: var(--text);
@@ -73,10 +65,7 @@
 
         .desktop-nav {
             display: flex;
-            gap: 40px;
-            position: absolute;
-            left: 50%;
-            transform: translateX(-50%);
+            gap: 30px;
         }
 
         .desktop-nav a {
@@ -89,194 +78,151 @@
             letter-spacing: 0.06em;
         }
 
-        .desktop-nav a:hover {
-            color: var(--accent);
-        }
+        .desktop-nav a:hover { color: var(--accent); }
 
         .nav-cta {
             background: var(--accent);
             color: white;
-            padding: 14px 30px;
+            padding: 12px 24px;
             font-size: 11px;
             font-weight: 700;
             text-decoration: none;
             text-transform: uppercase;
-            letter-spacing: 0.08em;
             transition: all 0.3s ease;
-        }
-
-        .nav-cta:hover {
-            background: #081d56;
         }
 
         /* HERO */
         .hero {
-            padding: 260px 0 140px;
-            min-height: 90vh;
+            padding: 220px 0 100px;
+            min-height: 85vh;
             display: flex;
             align-items: center;
         }
 
         .section-label {
             display: block;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 700;
             color: var(--accent);
             text-transform: uppercase;
-            margin-bottom: 35px;
+            margin-bottom: 25px;
             letter-spacing: 0.15em;
         }
 
         .hero-title {
-            font-family: 'Inter', sans-serif;
-            font-size: clamp(4rem, 8vw, 8rem);
-            line-height: 0.9;
-            letter-spacing: -0.06em;
-            margin-bottom: 80px;
-            max-width: 1200px;
+            font-size: clamp(3rem, 7vw, 7.5rem);
+            line-height: 0.95;
+            letter-spacing: -0.05em;
+            margin-bottom: 60px;
+            max-width: 1100px;
             font-weight: 800;
         }
 
         .char {
             display: inline-block;
             white-space: pre;
-            transition: transform 0.2s ease-out, color 0.4s ease;
+            transition: transform 0.15s ease-out, color 0.3s ease;
             will-change: transform;
         }
 
         .hero-footer {
             display: flex;
             justify-content: space-between;
-            align-items: flex-end;
-            border-top: 2px solid var(--text);
-            padding-top: 50px;
+            align-items: center;
+            border-top: 1px solid var(--text);
+            padding-top: 40px;
         }
 
         .hero-subtitle {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             color: var(--muted);
-            max-width: 600px;
-            font-weight: 400;
+            max-width: 550px;
         }
 
         /* SECTIONS */
-        .grid-section {
-            padding: 150px 0;
-            border-bottom: 1px solid var(--line);
-        }
-
-        .bg-soft {
-            background: var(--soft-bg);
-        }
-
-        .section-intro {
-            max-width: 800px;
-            margin-bottom: 60px;
-        }
+        .grid-section { padding: 120px 0; border-bottom: 1px solid var(--line); }
+        .bg-soft { background: var(--soft-bg); }
 
         .section-intro h2 {
-            font-family: 'Inter', sans-serif;
-            font-size: 56px;
+            font-size: clamp(32px, 5vw, 52px);
             margin-bottom: 20px;
-            line-height: 1;
+            line-height: 1.1;
             font-weight: 800;
             letter-spacing: -0.04em;
         }
 
-        .section-intro p {
-            color: var(--muted);
-            font-size: 18px;
-        }
-
         .institute-grid {
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
             border-top: 1px solid var(--line);
             border-left: 1px solid var(--line);
+            margin-top: 50px;
         }
 
         .grid-card {
-            padding: 80px 50px;
+            padding: 60px 40px;
             border-right: 1px solid var(--line);
             border-bottom: 1px solid var(--line);
-            transition: background 0.4s ease, transform 0.4s ease;
             background: white;
+            transition: background 0.4s ease, transform 0.3s ease;
         }
 
         .grid-card:hover {
-            background: #f8fafc;
-            transform: translateY(-4px);
+            background: #fdfdfd;
+            transform: translateY(-5px);
         }
 
         .card-num {
             color: var(--accent);
             font-weight: 800;
-            font-size: 13px;
-            margin-bottom: 35px;
+            font-size: 12px;
+            margin-bottom: 25px;
             display: block;
         }
 
         .grid-card h3 {
-            font-family: 'Inter', sans-serif;
-            font-size: 28px;
-            margin-bottom: 20px;
+            font-size: 24px;
+            margin-bottom: 15px;
             font-weight: 700;
-            line-height: 1.1;
-            letter-spacing: -0.03em;
+            letter-spacing: -0.02em;
         }
 
-        .grid-card p {
-            color: var(--muted);
-            font-size: 17px;
-            line-height: 1.6;
-        }
-
-        /* SPLIT */
+        /* SPLIT LAYOUT */
         .split-grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            margin-top: 60px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
         }
 
         .split-card {
-            padding: 60px;
+            padding: 50px;
             background: white;
             border: 1px solid var(--line);
         }
 
-        .split-card h3 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 20px;
-            letter-spacing: -0.03em;
-        }
-
-        .split-card ul {
-            list-style: none;
-            margin-top: 30px;
-        }
-
+        .split-card ul { list-style: none; margin-top: 20px; }
         .split-card li {
-            margin-bottom: 15px;
-            padding-left: 25px;
+            margin-bottom: 12px;
+            padding-left: 20px;
             position: relative;
             color: var(--muted);
+            font-size: 15px;
         }
 
         .split-card li::before {
-            content: "•";
+            content: "→";
             position: absolute;
             left: 0;
             color: var(--accent);
-            font-weight: bold;
+            font-weight: 800;
         }
 
-        /* REVEAL */
+        /* ANIMATION */
         .reveal {
             opacity: 0;
-            transform: translateY(50px);
-            transition: 1.4s var(--transition);
+            transform: translateY(30px);
+            transition: 1s var(--transition);
         }
 
         .reveal.in-view {
@@ -284,29 +230,10 @@
             transform: translateY(0);
         }
 
-        @media (max-width: 1100px) {
-            .institute-grid,
-            .split-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .desktop-nav {
-                display: none;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 0 30px;
-            }
-
-            .hero-title {
-                font-size: 4rem;
-            }
-
-            .section-intro h2 {
-                font-size: 42px;
-            }
+        @media (max-width: 900px) {
+            .desktop-nav { display: none; }
+            .container { padding: 0 25px; }
+            .hero-footer { flex-direction: column; align-items: flex-start; gap: 20px; }
         }
     </style>
 </head>
@@ -315,14 +242,11 @@
 <header class="site-header">
     <div class="container nav-wrap">
         <a href="#" class="brand">Free Thinker Institute</a>
-
         <nav class="desktop-nav">
             <a href="#intentions">Intentions</a>
             <a href="#goals">Goals</a>
             <a href="#whatwedo">What We Do</a>
-            <a href="#training">Training</a>
         </nav>
-
         <a href="https://discord.gg/" class="nav-cta">Join Discord</a>
     </div>
 </header>
@@ -330,11 +254,11 @@
 <main>
     <section class="hero">
         <div class="container">
-            <span class="section-label reveal">Community = Unity + Diversity</span>
+            <span class="section-label reveal">Unity through Diversity</span>
             <h1 class="hero-title" id="interactive-title">Increase happiness. Minimize harm.</h1>
             <div class="hero-footer reveal">
                 <p class="hero-subtitle">
-                    A high-impact community advancing human progress through integrated development.
+                    A high-impact community advancing human progress through integrated personal and professional development.
                 </p>
             </div>
         </div>
@@ -343,28 +267,26 @@
     <section class="grid-section" id="intentions">
         <div class="container">
             <div class="section-intro reveal">
-                <span class="section-label">01 — Five Intentions</span>
+                <span class="section-label">01 — Core Intentions</span>
                 <h2>A framework for thoughtful living.</h2>
-                <p>These intentions shape how the community approaches growth, dialogue, truth, and connection.</p>
+                <p>Guiding how we approach growth, dialogue, and connection.</p>
             </div>
 
             <div class="institute-grid">
                 <div class="grid-card reveal">
                     <span class="card-num">01</span>
-                    <h3>Devotion to self-improvement</h3>
-                    <p>Physical, intellectual, emotional, and philosophical growth.</p>
+                    <h3>Self-Improvement</h3>
+                    <p>Dedication to physical, intellectual, and emotional growth.</p>
                 </div>
-
                 <div class="grid-card reveal">
                     <span class="card-num">02</span>
-                    <h3>Transparency & Open-mindedness</h3>
-                    <p>Stay willing to refine your thinking and perspectives.</p>
+                    <h3>Transparency</h3>
+                    <p>Authentic sharing and open-mindedness to new perspectives.</p>
                 </div>
-
                 <div class="grid-card reveal">
                     <span class="card-num">03</span>
                     <h3>Critical Thinking</h3>
-                    <p>Improve judgment and rational thought.</p>
+                    <p>Using reason and evidence to refine judgment.</p>
                 </div>
             </div>
         </div>
@@ -380,20 +302,18 @@
             <div class="institute-grid">
                 <div class="grid-card reveal">
                     <span class="card-num">04</span>
-                    <h3>Is Polite</h3>
-                    <p>Create a warm and compassionate community.</p>
+                    <h3>Be Polite</h3>
+                    <p>Cultivating a warm, compassionate global community.</p>
                 </div>
-
                 <div class="grid-card reveal">
                     <span class="card-num">05</span>
-                    <h3>Is Prosperous</h3>
-                    <p>Help everyone achieve financial freedom.</p>
+                    <h3>Be Prosperous</h3>
+                    <p>Empowering members to achieve true financial freedom.</p>
                 </div>
-
                 <div class="grid-card reveal">
                     <span class="card-num">06</span>
-                    <h3>Shares Good Ideas</h3>
-                    <p>Create and spread ideas globally.</p>
+                    <h3>Share Ideas</h3>
+                    <p>Spreading impactful concepts that reduce suffering.</p>
                 </div>
             </div>
         </div>
@@ -403,25 +323,24 @@
         <div class="container">
             <div class="section-intro reveal">
                 <span class="section-label">03 — Our Focus</span>
-                <h2>Personal & Professional Development.</h2>
+                <h2>Integrated Development.</h2>
             </div>
 
             <div class="split-grid reveal">
                 <div class="split-card">
-                    <h3>Personal Development</h3>
+                    <h3>Personal Growth</h3>
                     <ul>
-                        <li>The five intentions</li>
-                        <li>Personal development topics</li>
-                        <li>Anything else of interest</li>
+                        <li>Intentional Living</li>
+                        <li>Emotional Intelligence</li>
+                        <li>Philosophical Rigor</li>
                     </ul>
                 </div>
-
                 <div class="split-card">
-                    <h3>Professional Development</h3>
+                    <h3>Professional Excellence</h3>
                     <ul>
-                        <li>Identify your dream job</li>
-                        <li>Build a valuable skillset</li>
-                        <li>Network with professionals</li>
+                        <li>Skillset Mastery</li>
+                        <li>Strategic Networking</li>
+                        <li>Career Advancement</li>
                     </ul>
                 </div>
             </div>
@@ -441,23 +360,21 @@ document.addEventListener('DOMContentLoaded', () => {
         const chars = title.querySelectorAll('.char');
 
         window.addEventListener('mousemove', (e) => {
+            const mouseX = e.clientX;
+            const mouseY = e.clientY;
+
             chars.forEach(char => {
                 const r = char.getBoundingClientRect();
-                const dist = Math.hypot(
-                    e.clientX - (r.left + r.width / 2),
-                    e.clientY - (r.top + r.height / 2)
-                );
+                const charCenterX = r.left + r.width / 2;
+                const charCenterY = r.top + r.height / 2;
+                
+                const dist = Math.hypot(mouseX - charCenterX, mouseY - charCenterY);
 
                 if (dist < 100) {
-                    const angle = Math.atan2(
-                        e.clientY - (r.top + r.height / 2),
-                        e.clientX - (r.left + r.width / 2)
-                    );
+                    const angle = Math.atan2(mouseY - charCenterY, mouseX - charCenterX);
+                    const force = (100 - dist) * -0.25;
 
-                    char.style.transform =
-                        `translate(${Math.cos(angle) * (100 - dist) * -0.2}px,
-                                   ${Math.sin(angle) * (100 - dist) * -0.2}px)`;
-
+                    char.style.transform = `translate(${Math.cos(angle) * force}px, ${Math.sin(angle) * force}px)`;
                     char.style.color = "#0d2a7a";
                 } else {
                     char.style.transform = '';
